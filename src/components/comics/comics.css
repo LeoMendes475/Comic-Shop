@@ -1,0 +1,116 @@
+ul li {
+    list-style: none;
+}
+
+.comic-content {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 2em;
+    margin-top: 3em;
+}
+
+.comic-card {
+    display: flex;
+
+    margin: 0 1em;
+    width: 440px;
+    border-radius: 8px;
+    border: 1px solid #1f3945;
+}
+
+.comic-card:hover {
+    transition: all 250ms ease-in;
+    /* transform: scale(1.1); */
+}
+
+.comic-card img {
+    width: 200px;
+    height: 300px;
+    border-radius: 6px 0px 0px 6px;
+}
+
+.comic-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* justify-content: center; */
+
+    width: 240px;
+}
+
+.comic-details h2 {
+    background: #db1518;
+    color: #fff;
+    font-size: 1em;
+    text-align: center;
+    border-radius: 0 6px 0 0;
+    
+    margin-bottom: 3em;
+    padding: 0.6em 0;  
+    width: 100%;
+    height: 70px;
+}
+
+.comic-details p {
+    padding: 0.1em 2em;
+}
+
+.comic-details a {
+    text-decoration: none;
+    color: #1f3945;
+    border: 1px solid #1f3945;
+    border-radius: 20px;
+    
+    padding: 0.6em 2.5em;
+    margin: 2em 0 0 2.6em 
+}
+
+.comic-details a:hover {
+    color: #fff;
+    background-color: #1f3945;
+}
+
+@media screen and (max-width: 1025px) {
+    .comic-content {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 2em;
+        margin-top: 3em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .comic-content {
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 1em;
+        margin-top: 2em;
+    }
+
+    .title {
+        font-size: 2em;
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .comic-card {
+        display: flex;
+        margin: 0 1em;
+        width: 380px;
+        border-radius: 8px;
+        border: 1px solid #1f3945;
+    }
+
+    .comic-card img {
+        width: 180px;
+    }
+
+    .comic-details a {
+        margin: 2em 0 0 1.6em;
+    }
+}
